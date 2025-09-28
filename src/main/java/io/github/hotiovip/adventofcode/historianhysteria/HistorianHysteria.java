@@ -1,6 +1,6 @@
 package io.github.hotiovip.adventofcode.historianhysteria;
 
-import io.github.hotiovip.adventofcode.FileReader;
+import io.github.hotiovip.adventofcode.Helper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ public class HistorianHysteria {
     int[] rightList;
 
     public HistorianHysteria() {
-        String fileData = FileReader.readFile("locations.txt");
+        String fileData = Helper.readFile("locations.txt");
         if (fileData == null) return;
 
         ArrayList<int[]> splitFileData = splitFileData(fileData);
