@@ -1,4 +1,4 @@
-package io.github.hotiovip.adventOfCode.historianHysteria;
+package io.github.hotiovip.adventofcode.historianhysteria;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

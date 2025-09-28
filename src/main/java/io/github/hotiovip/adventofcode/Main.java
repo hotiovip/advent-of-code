@@ -1,6 +1,6 @@
-package io.github.hotiovip.adventOfCode;
+package io.github.hotiovip.adventofcode;
 
-import io.github.hotiovip.adventOfCode.historianHysteria.HistorianHysteria;
+import io.github.hotiovip.adventofcode.historianhysteria.HistorianHysteria;
 
 public class Main {
     public static void main(String[] args) {
