@@ -26,7 +26,7 @@ public class HistorianHysteria {
     }
 
     // Part 1
-    public void calculateDistanceBetweenLists() {
+    private void calculateDistanceBetweenLists() {
         int[] distances = new int[leftList.length];
         for (int i = 0; i < leftList.length; i++) {
             distances[i] = Math.abs(leftList[i] - rightList[i]);
@@ -39,7 +39,7 @@ public class HistorianHysteria {
         System.out.printf("- Part 1: %d".indent(1), distanceBetweenLists);
     }
     // Part 2
-    public void calculateSimilarityScore() {
+    private void calculateSimilarityScore() {
         int similarityScore = 0;
 
         for (int leftNumber : leftList) {
@@ -55,7 +55,7 @@ public class HistorianHysteria {
         System.out.printf("- Part 2: %d".indent(1), similarityScore);
     }
 
-    public ArrayList<int[]> splitFileData(String fileData) {
+    private ArrayList<int[]> splitFileData(String fileData) {
         String[] splittedNumber = fileData.split("\\s+");
 
         // halbe Länge, weil links und rechts jeweils die Hälfte bekommen
