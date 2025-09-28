@@ -1,20 +1,17 @@
 package io.github.hotiovip.adventofcode.historianhysteria;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.github.hotiovip.adventofcode.FileReader;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class HistorianHysteria {
-    private final Logger logger = LoggerFactory.getLogger(HistorianHysteria.class);
+
     int[] leftList;
     int[] rightList;
 
     public HistorianHysteria() {
-        String fileData = readFile("locations.txt");
+        String fileData = FileReader.readFile("locations.txt");
         if (fileData == null) return;
 
         ArrayList<int[]> splitFileData = splitFileData(fileData);
@@ -58,16 +55,6 @@ public class HistorianHysteria {
         System.out.printf("- Part 2: %d".indent(1), similarityScore);
     }
 
-    public String readFile(String fileName) {
-        try (var in = HistorianHysteria.class.getResourceAsStream("/%s".formatted(fileName))) {
-            assert in != null;
-            return new String(in.readAllBytes(), StandardCharsets.UTF_8);
-        }
-        catch (IOException | NullPointerException e) {
-            logger.error("An Exception occurred while trying to readFile() with name '{}': {}", fileName, e.getMessage());
-            return null;
-        }
-    }
     public ArrayList<int[]> splitFileData(String fileData) {
         String[] splittedNumber = fileData.split("\\s+");
 
